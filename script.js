@@ -1,4 +1,5 @@
 const bookbtn = document.querySelector(".newbook");
+const form = document.querySelector('form');
 
 let myLibrary = [];
 
@@ -14,5 +15,5 @@ function addBookToLibrary(input) {
 }
 
 bookbtn.addEventListener("click", () => {
-    prompt('title')
+  form.classList.add('visible');
 });

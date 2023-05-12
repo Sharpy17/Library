@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Library</title>
 </head>
 <body>
@@ -15,6 +15,27 @@
     </div>
     <div class="body">
         <button class="newbook">+ Add Book</button>
+        <form action="" method="get">
+            <div>
+                <label for="name">Name of the book</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="author">Author of the book</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div>
+                <label for="pages">Number of pages</label>
+                <input type="number" id="pages" name="pages">
+            </div>
+            <div>
+                <label for="read">Have you read it?</label>
+                <input type="checkbox" id="read" name="read">
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
