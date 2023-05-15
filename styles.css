@@ -66,7 +66,7 @@ button:hover {
     background-color: #bae6fd;
 }
 
-#remove {
+.remove {
     background-color: #f43f5e;
 }
 
@@ -79,21 +79,26 @@ form,
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
     grid-row: 3;
-    gap: 10px;
+    gap: 22px;
+    text-align: left;
+    padding-left: 24px;
     width: 350px;
-    height: 200px;
+    height: 250px;
     background-color: #94a3b8;
     border: none;
     border-radius: 8px;
+    align-self: start;
 }
 
 .visible input,
+.visible label,
 .visible textarea,
 .visible button {
-  width: 150px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+   font-size: 15px;
+   display: inline-block;
+   width: 150px;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
