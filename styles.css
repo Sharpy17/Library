@@ -4,6 +4,7 @@
     font-family: Comfortaa;
     margin: 0;
     padding: 0;
+    font-weight: bold   ;
 } 
 
 body {
@@ -19,13 +20,9 @@ body {
 button {
     border: none;
     border-radius: 8px;
-    background-color: #cbd5e1;
+    background-color: #a855f7;
     width: 90px;
     height: 30px;
-}
-
-input:focus {
-    box-shadow: 0px 0px 3px black;
 }
 
 button:hover {
@@ -37,10 +34,11 @@ button:hover {
     height: 50px;
     justify-content: space-around;
     align-items: center;
-    background-color: #e2e8f0;
+    background-color: #ddd6fe;
     grid-row: 1;
     justify-self: stretch;
     align-self: start;
+    box-shadow: 3px 3px 3px rgb(230, 226, 226);
 }
 
 .newbook {
@@ -53,7 +51,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    grid-template-rows: repeat(auto-fit, clamp(50px, 1fr, 300px));
+    grid-template-rows: repeat(auto-fit, clamp(25px, 1fr, 150px));
 }
 
 .book-style {
@@ -67,7 +65,7 @@ button:hover {
     width: 225px;
     border: none;
     border-radius: 8px;
-    background-color: #bae6fd;
+    background-color: #ddd6fe;
 }
 
 .remove {
@@ -89,7 +87,7 @@ form,
     padding-left: 24px;
     width: 350px;
     height: 250px;
-    background-color: #94a3b8;
+    background-color: #e0e7ff;
     border: none;
     border-radius: 8px;
     align-self: start;
@@ -97,8 +95,7 @@ form,
 
 .visible input,
 .visible label,
-.visible textarea,
-.visible button {
+.visible textarea {
    font-size: 15px;
    display: inline-block;
    width: 150px;
@@ -107,4 +104,8 @@ form,
    box-sizing: border-box;
    border: none;
    border-radius: 2px;
+}
+
+input:focus {
+    outline: none;
 }
