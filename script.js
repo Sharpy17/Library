@@ -1,4 +1,4 @@
-const bookbtn = document.querySelector(".newbook");
+const newbook = document.querySelector(".newbook");
 const form = document.querySelector("form");
 const submit = document.querySelector(".submit");
 const cards = document.querySelector(".book-cards");
@@ -24,6 +24,9 @@ function displayBooks() {
   let removebtn = document.createElement("button");
   removebtn.classList.add("remove");
   removebtn.textContent = "Remove";
+  removebtn.addEventListener('click', () => {
+    removebtn.parentElement.remove();
+  })
   title.textContent = `Title: ${myLibrary[i].title}`;
   author.textContent = `Author: ${myLibrary[i].author}`;
   pages.textContent = `Pages: ${myLibrary[i].numberOfPages}`;
@@ -31,7 +34,7 @@ function displayBooks() {
   bookCard.append(title, author, pages, read, removebtn);
 }
 
-bookbtn.addEventListener("click", () => {
+newbook.addEventListener("click", () => {
   form.classList.add("visible");
   cards.classList.add("invisible");
 });
@@ -45,7 +48,7 @@ submit.addEventListener("click", (event) => {
   myLibrary[i] = new Book(title.value, author.value, pages.value, read);
   form.classList.remove("visible");
   cards.classList.remove("invisible");
-  console.log(myLibrary);
   displayBooks();
   i++;
 });
+
